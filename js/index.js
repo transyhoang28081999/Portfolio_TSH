@@ -63,6 +63,5 @@ function sendMail(){
 }
 
 function handleSending(){
-    let flag = sendMail()
-    if (flag) {reset()}
+    if (sendMail()) {document.getElementById("contactForm").reset();}
 }
