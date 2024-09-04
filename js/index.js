@@ -56,7 +56,13 @@ function sendMail(){
         subject: document.getElementById("subject").value
     }
 
-    if (!params.email || !params.message || !params.subject) return
+    if (!params.email || !params.message || !params.subject) return false
 
     emailjs.send("service_pngf1qm","template_qnjtgil",params).then(alert("Email đã được gửi"))
+    return true
+}
+
+function handleSending(){
+    let flag = sendMail()
+    if (flag) {reset()}
 }
