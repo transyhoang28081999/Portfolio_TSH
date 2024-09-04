@@ -46,3 +46,17 @@ window.onscroll = () => {
     let footer = document.querySelector('footer');
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+function sendMail(){
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value,
+        subject: document.getElementById("subject").value
+    }
+
+    if (!params.email || !params.message || !params.subject) return
+
+    emailjs.send("service_pngf1qm","template_qnjtgil",params).then(alert("Email đã được gửi"))
+}

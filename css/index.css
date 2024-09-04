@@ -737,6 +737,15 @@ section:nth-child(odd) .animate.scroll,
     width: 0;
 }
 
+.content ul {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.content ul>li{
+    font-size: large;
+    margin-top: 5px;
+} 
+
 /* BREAKPOINTS */
 @media (min-width: 1576px) {
     .home-image {
